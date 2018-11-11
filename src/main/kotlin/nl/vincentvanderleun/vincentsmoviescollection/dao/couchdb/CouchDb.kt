@@ -29,7 +29,6 @@ class CouchDb(val config: Config) {
 		
 	fun queryPage(queryFields: List<CouchDbQueryField>, sortFields: List<CouchDbSortField>?, pageSize: Int, bookmark: String?): CouchDbQueryPage {
 		val query = createQuery(queryFields, sortFields, pageSize, bookmark)
-		println(query)
 		val moshi = MoshiServiceSingleton.getDefaultMoshi()
 		val queryAdapter = moshi.adapter(Map::class.java)
 		
