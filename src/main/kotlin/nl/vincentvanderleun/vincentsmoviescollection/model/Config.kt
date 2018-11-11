@@ -5,4 +5,5 @@ data class Config (
 		val dbUrl: String,
 		val dbUser: String,
 		val dbPassword: String,
+		val host: String,
 		val port: Int)

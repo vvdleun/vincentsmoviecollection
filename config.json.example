@@ -1,7 +1,2 @@
-{
-	"dbType": "couchdb",
-	"dbUrl": "http://couchdb:5984/db",
-	"dbUser": "USERNAME",
-	"dbPassword": "PASSWORD",
-	"port": 8081
+{	"dbType": "couchdb",	"dbUrl": "http://couchdb:5984/db",	"dbUser": "USERNAME",	"dbPassword": "PASSWORD",	"host": "localhost",	"port": 8081
 }
