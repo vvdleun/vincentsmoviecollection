@@ -23,7 +23,8 @@ data class LegacyMovie(
 	val parent: Int,
 	val media: Int,
 	val attributes: List<Int>,
-	val orderKey: String?
+	val orderKey: String?,
+	val url: String?
 )
 
 data class LegacyFilter (
@@ -110,7 +111,8 @@ class LegacyEndpoint(config: Config) : EndpointHandler(config) {
 				parent,
 				media,
 				convertToLegacyIds(m.filterValues.values.flatten(), legacyFilterValueIds),
-				m.orderKey)		
+				m.orderKey,
+				m.url)
 	}
 	
 	private fun convertToLegacyIds(ids: List<String>, legacyFilterValueIds: Map<String, Int>): List<Int> {
