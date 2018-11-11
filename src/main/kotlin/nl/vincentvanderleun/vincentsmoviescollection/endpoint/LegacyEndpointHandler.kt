@@ -105,9 +105,14 @@ class LegacyEndpoint(config: Config) : EndpointHandler(config) {
 	}
 
 	private fun convertToLegacyMovie(legacyMovieId: Int, m: Movie, parent: Int, media: Int, legacyFilterValueIds: Map<String, Int>): LegacyMovie {
+		var name = m.name
+		if (m.year != null) {
+			name = name + " (" + m.year + ")"
+		}
+	
 		return LegacyMovie(
 				legacyMovieId,
-				m.name,
+				name,
 				parent,
 				media,
 				convertToLegacyIds(m.filterValues.values.flatten(), legacyFilterValueIds),
