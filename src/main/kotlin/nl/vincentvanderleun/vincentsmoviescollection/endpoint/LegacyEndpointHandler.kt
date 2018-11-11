@@ -91,7 +91,7 @@ class LegacyEndpoint(config: Config) : EndpointHandler(config) {
 						++legacyMovieId,
 						cm,
 						legacyMovieIds.get(m.id)!!,
-						legacyMediaIds.get(m.media)!!,
+						legacyMediaIds.get(cm.media)!!,
 						legacyFilterValueIds)
 			}))
 		})
